@@ -1,0 +1,8 @@
+@import './functions.scss';
+
+// Breakpoints
+$extraSmallWidth: calculateRem(320px);
+$smallWidth:      calculateRem(480px);
+$mediumWidth:     calculateRem(768px);
+$largeWidth:      calculateRem(1024px);
+$extraLargeWidth: calculateRem(1280px);

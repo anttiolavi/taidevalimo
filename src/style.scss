@@ -1,5 +1,5 @@
 /*
- Theme Name:     Flex Theme
+ Theme Name:     Taidevalimo theme
  Theme URI:
  Description:
  Author:         Antti Salo
@@ -11,10 +11,9 @@
 @import '../../HTML5-Reset-WordPress-Theme-master/style.css';
 
 @import 'scss/config/variables.scss';
+@import 'scss/config/variables-breakpoints.scss';
 @import 'vendor/normalize-scss/normalize.scss';
 @import 'scss/config/mixins.scss';
 
 @import 'scss/base/common.scss';
 @import 'scss/base/type.scss';
-
-@import 'scss/components/header.scss'
