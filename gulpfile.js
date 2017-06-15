@@ -1,13 +1,12 @@
 'use strict';
 
 var gulp = require('gulp'),
-  util = require('gulp-util'),
+  gutil = require('gulp-util'),
   gulpif = require('gulp-if'),
   uglify = require('gulp-uglify'),
   concat = require('gulp-concat'),
   jscs = require('gulp-jscs'),
   sass = require('gulp-sass'),
-  cssglobbing = require('gulp-css-globbing'),
   csso = require('gulp-csso'),
   postcss = require('gulp-postcss'),
   autoprefixer = require('autoprefixer-core'),
@@ -16,11 +15,20 @@ var gulp = require('gulp'),
   sourcePath = options.sourcePath,
   processors = [
     autoprefixer({
-      browsers: ['last 2 versions', '> 1% in FI', 'ie 9']
+      browsers: [
+        'last 2 Chrome versions',
+        'last 2 Firefox versions',
+        'Explorer >= 10',
+        'last 1 Edge versions',
+        'last 3 iOS versions',
+        'last 2 Safari versions',
+        'last 2 ChromeAndroid versions',
+        'Android >= 4.1'
+      ]
     })
   ],
 
-  isProd = Boolean(util.env.prod);
+  isProd = Boolean(gutil.env.prod);
 
 gulp.task('jscs', function() {
   return gulp.src(sourcePath + '/**/*.js')
@@ -37,6 +45,7 @@ gulp.task('build:js', ['jscs'], function() {
 gulp.task('build:css', function() {
   return gulp.src(sourcePath + '/style.scss')
     .pipe(sass(options.sass))
+    .on('error', gutil.log)
     .pipe(postcss(processors))
     .pipe(gulpif(isProd, csso()))
     .pipe(gulp.dest('.'));

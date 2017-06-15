@@ -1,2 +1,21 @@
 // Default font size
 $defaultFontSize: 16px;
+
+// Base typography
+$baseFontFamily: Macho, Helvetica, Arial, sans-serif;
+$baseFontSize: 1rem * (14px / $defaultFontSize);
+$baseLineHeight: 1.5em;
+$baseFontWeight: 500;
+$titleFontWeight: 700;
+
+// Elements
+$headerHeight: 6rem;
+
+// Colors
+$colorBlack: #000;
+$colorWhite: #fff;
+$colorOrange: #ee612d;
+
+// Paddings
+$paddingSmall: 0.625rem;
+$paddingLarge: 1.25rem;

@@ -1,10 +1,38 @@
-// @font-face {
-//   font-family: "lato";
-//   src: url("assets/fonts/latoRegular/lato-regular.eot");
-//   src: url("assets/fonts/latoRegular/lato-regular.eot?iefix") format("embedded-opentype"),
-//        url("assets/fonts/latoRegular/lato-regular.woff") format("woff"),
-//        url("assets/fonts/latoRegular/lato-regular.ttf") format("truetype"),
-//        url("assets/fonts/latoRegular/lato-regular.svg") format("svg");
-//   font-style: normal;
-//   font-weight: 400;
-// }
+body {
+  margin: 0;
+  font-family: $baseFontFamily;
+  font-size: $baseFontSize;
+  line-height: 1.25;
+  color: $colorBlack;
+  background: $colorWhite;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-weight: normal;
+  hyphens: auto;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  margin: 0;
+  padding: 0;
+  font-family: $baseFontFamily;
+  font-weight: $titleFontWeight;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 3.4rem;
+  line-height: 1;
+  hyphens: manual;
+}
+
+h3 {
+  font-size: 2.75rem;
+  line-height: 1;
+}
+
+h4 {
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 1;
+}

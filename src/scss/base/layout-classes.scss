@@ -1,0 +1,57 @@
+// Paddings
+.padding-small {
+  padding: $paddingSmall;
+}
+
+.padding-large {
+  padding: $paddingLarge;
+}
+
+.padding-clear-sides {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.padding-clear-top {
+  padding-top: 0;
+}
+
+.padding-keep-sides {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.padding-keep-top {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+.padding-keep-bottom {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.padding-keep-left {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+}
+
+.padding-keep-right {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+// Visibility
+.hidden {
+  display: none !important;
+}
+
+// Backgrounds
+.bg-white {
+  background-color: $colorWhite;
+}
+

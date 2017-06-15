@@ -1,9 +1,9 @@
 {
-  "name": "WPStarter",
-  "description": "Simple Wordpress HTML5 boilerplate",
+  "name": "Taidevalimo",
+  "description": "Wordpress theme for an art foundry website",
   "repository": {
     "type": "git",
-    "url": "https://github.com/anttisalo/wpstarter.git"
+    "url": "https://github.com/anttisalo/taidevalimo.git"
   },
   "version": "0.1.0",
   "dependencies": {

@@ -1,0 +1,22 @@
+.map-container {
+  width: 100%;
+  position: relative;
+}
+
+.map-container:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+#map {
+  position: absolute !important;
+  top: 0;
+  left: 1.25rem;
+  right: 1.25rem;
+  bottom: 0;
+
+  strong {
+    display: block;
+  }
+}

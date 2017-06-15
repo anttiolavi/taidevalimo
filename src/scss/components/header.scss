@@ -1,0 +1,78 @@
+#header {
+  position: relative;
+
+  @media (min-width: $mediumWidth) {
+    position: fixed;
+    width: 50%;
+    z-index: 10;
+  }
+
+  .page-title {
+    font-size: 1.25rem;
+    color: $colorOrange;
+
+    &-link {
+      display: block;
+      min-height: 4.3rem;
+      padding-bottom: 0;
+    }
+
+    &-logo {
+      display: block;
+      width: 5.5rem;
+
+      @media (min-width: $mediumWidth) {
+        width: 10.5rem;
+      }
+
+      svg {
+        fill: $colorOrange;
+      }
+    }
+  }
+
+
+  .header-menu-toggle {
+    display: inline-block;
+    position: absolute;
+    right: .625rem;
+    top: 50%;
+    margin-top: -1.75rem;
+    z-index: 11;
+
+    i {
+      font-size: 3.5rem;
+      color: $colorBlack;
+      transition: color .2s linear;
+
+      @media (min-width: $mediumWidth) {
+        cursor: pointer;
+      }
+
+      .menu-open &.close {
+        display: block;
+        color: $colorWhite;
+      }
+
+      .menu-open &.open {
+        display: none;
+      }
+
+      &.close {
+        display: none;
+      }
+    }
+
+    html.no-touch & {
+      display: none;
+    }
+  }
+
+  .home & {
+    background-color: $colorWhite;
+
+    @media (min-width: $mediumWidth) {
+      background-color: transparent;
+    }
+  }
+}

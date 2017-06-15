@@ -1,0 +1,127 @@
+.nav-container {
+  position: fixed;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: max-height .5s ease-in-out;
+
+  @media (min-width: $mediumWidth) {
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+    transition: max-height .5s ease-in-out;
+  }
+
+  .menu-open & {
+    height: calc(100vh - #{$headerHeight});
+    z-index: 11;
+  }
+
+  .home & {
+    display: none;
+
+    @media (min-width: $mediumWidth) {
+      display: block;
+    }
+  }
+
+  &-graphic {
+    padding-top: $headerHeight;
+    height: calc(100vh);
+    text-align: right;
+
+    svg {
+      fill: $colorOrange;
+      height: 100vh;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+#nav {
+  @media (min-width: $mediumWidth) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+.nav-background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: $colorOrange;
+  opacity: 0;
+  transition: opacity .1s ease-in-out;
+  z-index: -1;
+
+  .menu-open & {
+    opacity: 0.95;
+    z-index: 10;
+  }
+}
+
+.main-theme-menu-container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: calc(100vh - #{$headerHeight});
+
+  @media (min-width: $mediumWidth) {
+    position: static;
+    width: auto;
+    height: auto;
+    top: auto;
+  }
+}
+
+.main-theme-menu,
+.frontpage-mobile-menu {
+  @media (min-width: $smallWidth) and (max-width: $mediumWidth - 1) {
+    padding-left: $paddingLarge;
+  }
+
+  .menu-item {
+    font-size: 3.4rem;
+    font-weight: $titleFontWeight;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $colorWhite;
+    padding-bottom: calc(#{$paddingLarge} - 7px);
+
+    @media (min-width: $mediumWidth) {
+      font-size: 5rem;
+      color: $colorBlack;
+    }
+
+    a {
+      display: inline-block;
+      padding-bottom: 7px;
+
+      &:hover {
+        padding-bottom: 4px;
+        border-bottom: 3px solid $colorBlack;
+      }
+    }
+  }
+}
+
+.frontpage-mobile-menu-container {
+  @media (min-width: $mediumWidth) {
+    display: none;
+  }
+}
+
+.frontpage-mobile-menu {
+  height: calc(100vh - #{$headerHeight});
+
+  .menu-item {
+    color: $colorBlack;
+  }
+}

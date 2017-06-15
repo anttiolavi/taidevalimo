@@ -1,6 +1,10 @@
-body {
-  font-size: 16px;
-  position: relative;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  font-size: 100%;
 }
 
 ul,
@@ -12,28 +16,36 @@ ol {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
-h1 {
-  font-size: 2.25em;
-  color: #000;
+textarea {
+  line-height: normal;
 }
 
-h2 {
-  font-size: 1.75em;
-  color: #000;
-  text-transform: uppercase;
+img {
+  max-width: 100%;
 }
 
-h3 {
-  font-size: 1.5em;
-}
-
-h4 {
-  font-size: 1.25em;
-}
-
-#wrapper {
+.site-background-image {
+  position: fixed;
+  height: 100vh;
   width: 100%;
-  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+}
+
+#primary {
+  @media (min-width: $mediumWidth) {
+    width: 50%;
+    float: right;
+    padding-top: $headerHeight;
+  }
+}
+
+#main {
+  @media (min-width: $mediumWidth) {
+    max-width: 40rem;
+  }
 }

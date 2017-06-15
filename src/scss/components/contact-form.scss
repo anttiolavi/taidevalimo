@@ -1,0 +1,30 @@
+.wpcf7-form {
+  p {
+    position: relative;
+  }
+
+  label {
+    position: absolute;
+    top: 5px;
+    left: $paddingSmall;
+    z-index: 1;
+    color: #a09696;
+  }
+
+  input[type='submit'] {
+    padding: $paddingLarge;
+    color: $colorWhite;
+    background-color: $colorOrange;
+    font-size: 1.25rem;
+    line-height: 1;
+    border: 0;
+    border-bottom: 3px solid darken($colorOrange, 20%);
+  }
+}
+
+.contact-form-input {
+  width: 100%;
+  border: 2px solid rgba(0,0,0,0.1);
+  padding: 0.5rem;
+  padding-top: 1.5rem;
+}

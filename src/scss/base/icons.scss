@@ -1,0 +1,11 @@
+.material-icons {
+  &.icon-medium {
+    font-size: 1.125rem;
+    line-height: $baseLineHeight;
+  }
+
+  &.icon-large {
+    font-size: $baseFontSize;
+    line-height: $baseLineHeight;
+  }
+}
