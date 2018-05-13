@@ -48,6 +48,9 @@
   ?>
 
   <meta name="Copyright" content="Copyright &copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?>. All Rights Reserved.">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
 
   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -56,17 +59,8 @@
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <!-- Type Kit embed code -->
-  <script>
-    (function(d) {
-      var config = {
-        kitId: 'tdx6ksq',
-        scriptTimeout: 3000,
-        async: true
-      },
-      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-    })(document);
-  </script>
+  <script src="https://use.typekit.net/bay1uje.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
   <?php wp_head(); ?>
 
@@ -86,19 +80,21 @@
 
     <header id="header" role="banner">
       <h1 class="page-title">
-        <a class="page-title-link padding-large" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+        <a class="page-title-link padding-large padding-keep-left" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
           <i class="page-title-logo">
-            <?php echo file_get_contents(get_stylesheet_directory_uri() . "/assets/img/tekstilogo_valimo.svg"); ?>
+            <?php echo file_get_contents(get_stylesheet_directory_uri() . "/assets/img/tekstilogo_valimo_v2.svg"); ?>
           </i>
         </a>
       </h1>
-      <div class="header-menu-toggle">
+      <button class="button menu-toggle-open padding-small padding-keep-right">
         <i class="material-icons open">menu</i>
-        <i class="material-icons close">close</i>
-      </div>
+      </button>
     </header>
 
     <div class="nav-background"></div>
+    <button class="button menu-toggle-closed">
+      <i class="material-icons close">close</i>
+    </button>
     <div class="nav-container">
       <div class="nav-container-graphic padding-large">
         <i class="logopuu">
@@ -110,7 +106,7 @@
           wp_nav_menu(
             array(
               'theme_location' => 'primary',
-              'menu_class' => 'main-theme-menu',
+              'menu_class' => 'main-theme-menu padding-large padding-clear-bottom',
               'container_class' => 'main-theme-menu-container'
             )
           );

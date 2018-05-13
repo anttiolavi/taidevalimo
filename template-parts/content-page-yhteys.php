@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="article post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(array('article', 'padding-large', 'padding-keep-bottom')); ?>>
   <div class="article-content padding-large padding-keep-sides">
     <?php
       $ingress = get_post_meta( get_the_id(), 'ingress');
@@ -17,7 +17,7 @@
     ?>
 
     <?php if (!empty($ingress[0])) : ?>
-      <h4 class="article-ingress"><?php echo $ingress[0]; ?></h4>
+      <h2 class="article-ingress small-margin heading-s"><?php echo $ingress[0]; ?></h2>
     <?php endif; ?>
 
     <div class="article-text">
