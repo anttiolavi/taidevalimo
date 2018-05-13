@@ -9,6 +9,11 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
   <main id="main" class="site-main" role="main">
+
+    <div class="frontpage-mobile__scroll-motivation">
+      <i class="icon-arrow-down material-icons">expand_more</i>
+    </div>
+
     <div class="front-page-mobile-nav-graphic padding-large padding-keep-sides">
       <i class="logopuu">
         <?php echo file_get_contents(get_stylesheet_directory_uri() . "/assets/img/logopuu_v5.svg"); ?>
@@ -22,10 +27,6 @@ get_header(); ?>
       'container_class' => 'frontpage-mobile-menu-container'
     ));
   ?>
-
-  <div class="frontpage-mobile__scroll-motivation">
-    <i class="icon-arrow-down material-icons">expand_more</i>
-  </div>
 
   <?php
 
