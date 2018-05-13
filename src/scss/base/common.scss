@@ -19,10 +19,6 @@ a {
   color: inherit;
 }
 
-textarea {
-  line-height: normal;
-}
-
 img {
   max-width: 100%;
 }
@@ -42,10 +38,26 @@ img {
     float: right;
     padding-top: $headerHeight;
   }
+
+  &.front-page {
+    position: relative;
+  }
 }
 
 #main {
   @media (min-width: $mediumWidth) {
     max-width: 40rem;
   }
+}
+
+@media (max-width: $mediumWidth - 1) {
+  .scrolled #wrapper {
+    padding-top: $headerHeight;
+  }
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
 }

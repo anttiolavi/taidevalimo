@@ -24,9 +24,13 @@
     <div class="article-text">
       <?php echo apply_filters('meta_content', $firstParagraphs); ?>
     </div>
-    <div class="article-image-container padding-large padding-clear-sides">
-      <img class="article-image" src="<?php echo $imageUrl; ?>"></img>
-    </div>
+
+    <?php if (!empty($imageUrl)) : ?>
+      <div class="article-image-container padding-large padding-clear-sides">
+        <img class="article-image" src="<?php echo $imageUrl; ?>"></img>
+      </div>
+    <?php endif; ?>
+
     <div class="article-text">
       <?php echo apply_filters('meta_content', $secondParagraphs); ?>
     </div>

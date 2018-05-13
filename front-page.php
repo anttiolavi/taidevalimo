@@ -9,14 +9,23 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
   <main id="main" class="site-main" role="main">
+    <div class="front-page-mobile-nav-graphic padding-large padding-keep-sides">
+      <i class="logopuu">
+        <?php echo file_get_contents(get_stylesheet_directory_uri() . "/assets/img/logopuu_v5.svg"); ?>
+      </i>
+    </div>
 
   <?php
     wp_nav_menu(array(
       'menu' => 'etusivun-valikko',
-      'menu_class' => 'frontpage-mobile-menu',
+      'menu_class' => 'frontpage-mobile-menu padding-large padding-clear-bottom',
       'container_class' => 'frontpage-mobile-menu-container'
     ));
   ?>
+
+  <div class="frontpage-mobile__scroll-motivation">
+    <i class="icon-arrow-down material-icons">expand_more</i>
+  </div>
 
   <?php
 

@@ -18,15 +18,14 @@ get_header(); ?>
         'category_name' => $post->post_name
       );
 
-      $query = query_posts($args);
+      $query = new WP_Query($args);
 
-      if (have_posts()) {
-        while (have_posts()) {
-          the_post();
-          get_template_part('template-parts/content', 'page-palvelut');
-        }
+      if ($query->have_posts()) {
+        while ($query->have_posts()) : $query->the_post();
+          get_template_part('template-parts/content', 'page');
+        endwhile;
 
-        wp_reset_postdata();
+        wp_reset_query();
       }
     ?>
 
