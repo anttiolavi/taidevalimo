@@ -24,6 +24,10 @@ h2 {
   font-size: 3.4rem;
   line-height: 1;
   hyphens: manual;
+
+  @media (max-width: $largeWidth - 1) {
+    font-size: 1.875rem;
+  }
 }
 
 h3 {
@@ -32,7 +36,31 @@ h3 {
 }
 
 h4 {
-  font-size: 2.25rem;
-  font-weight: 500;
+  font-size: 1.4rem;
   line-height: 1;
+  hyphens: manual;
+
+  @media (min-width: $mediumWidth) {
+    font-size: 2.25rem;
+  }
+}
+
+.heading-l {
+  font-size: 3.4rem;
+
+  @media (max-width: $largeWidth - 1) {
+    font-size: 1.875rem;
+  }
+}
+
+.heading-m {
+  font-size: 2.75rem;
+}
+
+.heading-s {
+  font-size: 1.4rem;
+
+  @media (min-width: $mediumWidth) {
+    font-size: 2.25rem;
+  }
 }

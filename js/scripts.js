@@ -1500,12 +1500,39 @@ break n}}c[a++]=p}return c},Wt.prototype.chain=function(){return Ne(this)},Wt.pr
 },Wt.prototype.run=Wt.prototype.toJSON=Wt.prototype.valueOf=Wt.prototype.value=function(){return Rr(this.__wrapped__,this.__actions__)},Wt.prototype.collect=Wt.prototype.map,Wt.prototype.head=Wt.prototype.first,Wt.prototype.select=Wt.prototype.filter,Wt.prototype.tail=Wt.prototype.rest,Wt}var w,b="3.6.0",x=1,A=2,j=4,k=8,E=16,I=32,O=64,R=128,C=256,S=30,W="...",T=150,U=16,F=0,N=1,$=2,L="Expected a function",B="__lodash_placeholder__",z="[object Arguments]",M="[object Array]",D="[object Boolean]",P="[object Date]",q="[object Error]",K="[object Function]",V="[object Number]",Y="[object Object]",Z="[object RegExp]",G="[object String]",J="[object ArrayBuffer]",X="[object Float32Array]",H="[object Float64Array]",Q="[object Int8Array]",nt="[object Int16Array]",tt="[object Int32Array]",rt="[object Uint8Array]",et="[object Uint8ClampedArray]",ut="[object Uint16Array]",ot="[object Uint32Array]",it=/\b__p\+='';/g,ft=/\b(__p\+=)''\+/g,at=/(__e\(.*?\)|\b__t\))\+'';/g,ct=/&(?:amp|lt|gt|quot|#39|#96);/g,lt=/[&<>"'`]/g,pt=RegExp(ct.source),st=RegExp(lt.source),ht=/<%-([\s\S]+?)%>/g,_t=/<%([\s\S]+?)%>/g,vt=/<%=([\s\S]+?)%>/g,gt=/[\u0300-\u036f\ufe20-\ufe23]/g,yt=/\$\{([^\\}]*(?:\\.[^\\}]*)*)\}/g,dt=/\w*$/,mt=/^0[xX]/,wt=/^\[object .+?Constructor\]$/,bt=/[\xc0-\xd6\xd8-\xde\xdf-\xf6\xf8-\xff]/g,xt=/($^)/,At=/[.*+?^${}()|[\]\/\\]/g,jt=RegExp(At.source),kt=/['\n\r\u2028\u2029\\]/g,Et=RegExp("[A-Z\\xc0-\\xd6\\xd8-\\xde]+(?=[A-Z\\xc0-\\xd6\\xd8-\\xde][a-z\\xdf-\\xf6\\xf8-\\xff]+)|[A-Z\\xc0-\\xd6\\xd8-\\xde]?[a-z\\xdf-\\xf6\\xf8-\\xff]+|[A-Z\\xc0-\\xd6\\xd8-\\xde]+|[0-9]+","g"),It=" \t\x0b\f\xa0\ufeff\n\r\u2028\u2029\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u202f\u205f\u3000",Ot="Array ArrayBuffer Date Error Float32Array Float64Array Function Int8Array Int16Array Int32Array Math Number Object RegExp Set String _ clearTimeout document isFinite parseInt setTimeout TypeError Uint8Array Uint8ClampedArray Uint16Array Uint32Array WeakMap window".split(" "),Rt={};
 Rt[X]=Rt[H]=Rt[Q]=Rt[nt]=Rt[tt]=Rt[rt]=Rt[et]=Rt[ut]=Rt[ot]=true,Rt[z]=Rt[M]=Rt[J]=Rt[D]=Rt[P]=Rt[q]=Rt[K]=Rt["[object Map]"]=Rt[V]=Rt[Y]=Rt[Z]=Rt["[object Set]"]=Rt[G]=Rt["[object WeakMap]"]=false;var Ct={};Ct[z]=Ct[M]=Ct[J]=Ct[D]=Ct[P]=Ct[X]=Ct[H]=Ct[Q]=Ct[nt]=Ct[tt]=Ct[V]=Ct[Y]=Ct[Z]=Ct[G]=Ct[rt]=Ct[et]=Ct[ut]=Ct[ot]=true,Ct[q]=Ct[K]=Ct["[object Map]"]=Ct["[object Set]"]=Ct["[object WeakMap]"]=false;var St={leading:false,maxWait:0,trailing:false},Wt={"\xc0":"A","\xc1":"A","\xc2":"A","\xc3":"A","\xc4":"A","\xc5":"A","\xe0":"a","\xe1":"a","\xe2":"a","\xe3":"a","\xe4":"a","\xe5":"a","\xc7":"C","\xe7":"c","\xd0":"D","\xf0":"d","\xc8":"E","\xc9":"E","\xca":"E","\xcb":"E","\xe8":"e","\xe9":"e","\xea":"e","\xeb":"e","\xcc":"I","\xcd":"I","\xce":"I","\xcf":"I","\xec":"i","\xed":"i","\xee":"i","\xef":"i","\xd1":"N","\xf1":"n","\xd2":"O","\xd3":"O","\xd4":"O","\xd5":"O","\xd6":"O","\xd8":"O","\xf2":"o","\xf3":"o","\xf4":"o","\xf5":"o","\xf6":"o","\xf8":"o","\xd9":"U","\xda":"U","\xdb":"U","\xdc":"U","\xf9":"u","\xfa":"u","\xfb":"u","\xfc":"u","\xdd":"Y","\xfd":"y","\xff":"y","\xc6":"Ae","\xe6":"ae","\xde":"Th","\xfe":"th","\xdf":"ss"},Tt={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;","`":"&#96;"},Ut={"&amp;":"&","&lt;":"<","&gt;":">","&quot;":'"',"&#39;":"'","&#96;":"`"},Ft={"function":true,object:true},Nt={"\\":"\\","'":"'","\n":"n","\r":"r","\u2028":"u2028","\u2029":"u2029"},$t=Ft[typeof exports]&&exports&&!exports.nodeType&&exports,Lt=Ft[typeof module]&&module&&!module.nodeType&&module,Bt=Ft[typeof self]&&self&&self.Object&&self,Ft=Ft[typeof window]&&window&&window.Object&&window,zt=Lt&&Lt.exports===$t&&$t,Mt=$t&&Lt&&typeof global=="object"&&global||Ft!==(this&&this.window)&&Ft||Bt||this,Dt=m();
 typeof define=="function"&&typeof define.amd=="object"&&define.amd?(Mt._=Dt, define(function(){return Dt})):$t&&Lt?zt?(Lt.exports=Dt)._=Dt:$t._=Dt:Mt._=Dt}).call(this);
+(function(window, $) {
+  $(window).scroll(function() {
+    var $body = $('body');
+
+    if (window.scrollY > 96) {
+      $body.addClass('scrolled');
+    } else {
+      $body.removeClass('scrolled');
+    }
+  });
+})(window, jQuery);
+
 (function($) {
   var $header = $('#header');
-  var $menuToggle = $header.find('.header-menu-toggle');
+  var $wrapper = $('#wrapper');
+  var $menuToggleOpen = $header.find('.menu-toggle-open');
+  var $menuToggleClosed = $wrapper.find('.menu-toggle-closed');
 
-  $menuToggle.on('click', function(e) {
+  $menuToggleOpen.on('click', function(e) {
     var $target = $(e.currentTarget);
-    $target.closest('.page-wrapper').toggleClass('menu-open');
+    var $wrapper = $target.closest('.page-wrapper');
+
+    if (!$wrapper.hasClass('menu-open')) {
+      $wrapper.addClass('menu-open');
+    }
   });
-})(jQuery)
+
+  $menuToggleClosed.on('click', function(e) {
+    var $target = $(e.currentTarget);
+    var $wrapper = $target.closest('.page-wrapper');
+
+    if ($wrapper.hasClass('menu-open')) {
+      $wrapper.removeClass('menu-open');
+    }
+  });
+})(jQuery);

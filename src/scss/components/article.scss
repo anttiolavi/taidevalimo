@@ -1,16 +1,39 @@
 .article {
+  margin-bottom: 1rem;
+
   &-title {
     text-transform: uppercase;
   }
 
   &-ingress {
+    font-weight: $ingressFontWeight;
     margin-bottom: calc(#{$paddingSmall} * 5);
+
+    &.small-margin {
+      margin-bottom: calc(#{$paddingSmall} * 3);
+    }
   }
 
   &-text {
     p {
       font-size: 1.175rem;
       max-width: 28rem;
+      font-weight: 500;
+
+      strong {
+        display: inline-block;
+        font-weight: $ingressFontWeight;
+        padding-top: $paddingLarge;
+      }
+    }
+
+    a {
+      color: $colorOrange;
+
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -27,7 +50,11 @@
 }
 
 .front-page-excerpt {
-  padding-bottom: 5rem;
+  padding-bottom: $paddingSmall * 3;
+
+  @media (min-width: $mediumWidth) {
+    padding-bottom: 5rem;
+  }
 
   &__title {
     color: $colorBlack;
@@ -36,17 +63,22 @@
     p {
       margin-top: $paddingSmall;
       margin-bottom: $paddingSmall;
+
+      @media (max-width: $mediumWidth - 1) {
+        padding: 0 $paddingSmall;
+      }
     }
 
     a {
       position: absolute;
       top: 0;
-      left: 0;
       bottom: 0;
+      width: 100%;
     }
   }
 
   &__link {
+    position: relative;
     display: inline-block;
     font-size: $paddingLarge;
     text-transform: uppercase;
@@ -54,9 +86,13 @@
     padding-bottom: 2px;
     border-bottom: 2px solid $colorBlack;
 
+    @media (max-width: $mediumWidth - 1) {
+      font-size: 1rem;
+      margin: 0 $paddingSmall;
+    }
+
     &:hover {
       text-decoration: none;
-      border-color: $colorOrange;
     }
   }
 
@@ -65,12 +101,38 @@
     background-size: cover;
     background-position: center center;
   }
+}
 
-  &__copy {
-    display: none;
+.front-page-excerpt__title + .front-page-excerpt__link,
+.front-page-excerpt__link {
+  html.no-touch &:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background-color: $colorBlack;
+    left: 50%;
+    height: 2px;
+    bottom: -2px;
+    transition: width .15s, left .15s;
+    transition-timing-function: ease-in-out;
+    width: 0;
+  }
 
-    @media (min-width: $mediumWidth) {
-      display: block;
+  html.no-touch &:hover {
+    &:after {
+      background-color: $colorOrange;
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+.front-page-excerpt__title {
+  html.no-touch &:hover {
+    & + .front-page-excerpt__link:after {
+      background-color: $colorOrange;
+      width: 100%;
+      left: 0;
     }
   }
 }

@@ -51,7 +51,8 @@ get_header(); ?>
           var mapStyle = <?php echo file_get_contents(get_stylesheet_directory_uri() . "/assets/json/mapStyle.json"); ?>;
 
           var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 4,
+            zoom: 5,
+            scrollwheel: false,
             center: mapPosition,
             title: 'Taidevalimo',
             styles: mapStyle

@@ -1,4 +1,6 @@
 .wpcf7-form {
+  position: relative;
+
   p {
     position: relative;
   }
@@ -8,7 +10,7 @@
     top: 5px;
     left: $paddingSmall;
     z-index: 1;
-    color: #a09696;
+    color: $colorOrange;
   }
 
   input[type='submit'] {
@@ -20,11 +22,54 @@
     border: 0;
     border-bottom: 3px solid darken($colorOrange, 20%);
   }
+
+  .wpcf7-response-output {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: $colorErrorOrange;
+    padding: 0.2rem;
+    padding-left: 0.35rem;
+    margin: 0;
+    text-transform: uppercase;
+    border: none;
+    border-bottom: 3px solid $colorOrange;
+  }
+}
+
+.wpcf7-form-control-wrap {
+  display: block;
+
+  .wpcf7-not-valid-tip {
+    position: absolute;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    background-color: $colorErrorOrange;
+    bottom: -0.5rem;
+    right: -0.5rem;
+    padding: 0.2rem;
+    padding-left: 0.35rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid $colorOrange;
+  }
 }
 
 .contact-form-input {
   width: 100%;
-  border: 2px solid rgba(0,0,0,0.1);
-  padding: 0.5rem;
-  padding-top: 1.5rem;
+  position: relative;
+  border: 2px solid $colorOrange;
+  padding: $paddingSmall;
+  padding-top: calc(#{$paddingSmall} * 3);
+  line-height: 1.25;
 }
+
+.contact-form-heading {
+  margin-bottom: calc(#{$paddingSmall} * 3);
+}
+

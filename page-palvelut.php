@@ -15,7 +15,7 @@ get_header(); ?>
 
     <?php
       $args = array(
-        'category_name' => 'palvelut'
+        'category_name' => $post->post_name
       );
 
       $query = new WP_Query($args);

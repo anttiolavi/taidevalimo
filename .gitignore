@@ -6,3 +6,4 @@ phantomjs.log
 npm-debug.log
 .DS_Store
 style.css
+Homebrew unload mysql service
